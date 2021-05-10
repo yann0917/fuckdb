@@ -94,7 +94,7 @@ func GenStructInfo(repo model.IRepo, dbName string, tableName string, structName
 		return nil, err
 	}
 	dbTypes := generateColumnTypes(columns, 0, jsonAnnotation, gormAnnotation, xmlAnnotation, xormAnnotation, fakerAnnotation, gureguTypes)
-	src := fmt.Sprintf("package %s\ntype %s %s}",
+	src := fmt.Sprintf("package %s\ntype %s %s\n}",
 		pkgName,
 		structName,
 		dbTypes)

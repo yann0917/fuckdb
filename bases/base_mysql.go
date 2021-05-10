@@ -52,6 +52,7 @@ func generateColumnTypes(columns []model.Column, depth int, jsonAnnotation bool,
 				fieldName,
 				valueType)
 		}
+		structure += " // " + column.Comment
 	}
 	return structure
 }
